@@ -1,5 +1,5 @@
-#Peltier Cooling for Test Modules
-##Introduction
+# Peltier Cooling for Test Modules
+## Introduction
 Peltier cooling system and PID control loop. The peltier_cooling program can be called with optional parameters to define the ports for the Arduino and Bk16XXPs power supply, respectively. For example:
 
 ./peltier_cooling /dev/ttyACM0 /dev/ttyUSB0
@@ -8,8 +8,10 @@ The default ports are: Arduino - /dev/ttyACM0 ; PS - /dev/ttyUSB0
 
 The arduinoTemp.ino program should be uploaded to the Arduino first. The Arduino makes temperature calculations and sends them continuously. The peltier_cooling program parses the measurements and accepts the most recent, complete temperature reading.
 
+This project uses labRemote as a submodule.
+
 ----
-##Materials
+## Materials
 * 2 x CP85438 (Peltier devices; $23 each): [https://www.digikey.com/product-detail/en/cui-inc/CP85438/102-1682-ND/1747374](https://www.digikey.com/product-detail/en/cui-inc/CP85438/102-1682-ND/1747374)
 * 1 x 1688B (single-channel DC power supply; $367): [https://www.digikey.com/product-detail/en/b-k-precision/1688B/BK1688B-ND/3476792](https://www.digikey.com/product-detail/en/b-k-precision/1688B/BK1688B-ND/3476792)
 * 1 x MF52C1103F3380 (NTC thermistor; $2): [https://www.digikey.com/product-detail/en/cantherm/MF52C1103F3380/317-1376-ND/1840604](https://www.digikey.com/product-detail/en/cantherm/MF52C1103F3380/317-1376-ND/1840604)
