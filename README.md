@@ -8,9 +8,8 @@ The default ports are: Arduino - /dev/ttyACM0 ; PS - /dev/ttyUSB0
 
 The arduinoTemp.ino program should be uploaded to the Arduino first. The Arduino makes temperature calculations and sends them continuously. The peltier_cooling program parses the measurements and accepts the most recent, complete temperature reading.
 
-This project uses labRemote as a submodule.
+This project requires labRemote as a submodule.
 
-----
 ## Materials
 * 2 x CP85438 (Peltier devices; $23 each): [https://www.digikey.com/product-detail/en/cui-inc/CP85438/102-1682-ND/1747374](https://www.digikey.com/product-detail/en/cui-inc/CP85438/102-1682-ND/1747374)
 * 1 x 1688B (single-channel DC power supply; $367): [https://www.digikey.com/product-detail/en/b-k-precision/1688B/BK1688B-ND/3476792](https://www.digikey.com/product-detail/en/b-k-precision/1688B/BK1688B-ND/3476792)
@@ -20,3 +19,7 @@ This project uses labRemote as a submodule.
 * 1 x Corsair H115i (CPU liquid cooler; $134): [https://www.corsair.com/us/en/Categories/Products/Liquid-Cooling/Dual-Radiator-Liquid-Coolers/Hydro-Series%E2%84%A2-H115i-280mm-Extreme-Performance-Liquid-CPU-Cooler/p/CW-9060027-WW](https://www.corsair.com/us/en/Categories/Products/Liquid-Cooling/Dual-Radiator-Liquid-Coolers/Hydro-Series%E2%84%A2-H115i-280mm-Extreme-Performance-Liquid-CPU-Cooler/p/CW-9060027-WW)
 * 2 x NH0503R000FC02 (3 ohm, 50 watt resistor; $15 each): [https://www.mouser.com/ProductDetail/Vishay-Dale/NH0503R000FC02?qs=sGAEpiMZZMtbXrIkmrvidIBArrzlwrMErhRuYEXc72g%3D](https://www.mouser.com/ProductDetail/Vishay-Dale/NH0503R000FC02?qs=sGAEpiMZZMtbXrIkmrvidIBArrzlwrMErhRuYEXc72g%3D)
 * 1 x NH0506R000FE02 (6 ohm, 50 watt resistor; $15): [https://www.mouser.com/ProductDetail/Vishay-Dale/NH0506R000FE02?qs=sGAEpiMZZMtbXrIkmrvidDNaDpN5VXc5shjJv5Q4YpI%3D](https://www.mouser.com/ProductDetail/Vishay-Dale/NH0506R000FE02?qs=sGAEpiMZZMtbXrIkmrvidDNaDpN5VXc5shjJv5Q4YpI%3D)
+
+## Troubleshooting
+`Resource temporarily unavailable`  
+A blocking/non-blocking socket error. Make sure Serial Monitor is closed in Arduino Studio and that the program is not already running in a different window.
